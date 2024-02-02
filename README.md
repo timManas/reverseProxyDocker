@@ -11,15 +11,15 @@ Backend - Node <br />
 
 ### 1. Run each Docker Container Individually
 
-1. Build Docker Container:
+1. Build Docker Container: <br />
    docker build -t reactapp:1.0.0 . <br />
    docker build -t expressapp:1.0.0 . <br />
    docker build -t reverseproxy:1.0.0 . <br />
 
-2. Create Docker Network to run your docker files in:
+2. Create Docker Network to run your docker files in: <br />
    docker network create sub-etha <br />
 
-3. Run Docker Containers
+3. Run Docker Containers <br />
    docker run -d --name=backend --network=sub-etha expressapp:1.0.0 <br />
    docker run -d --name=frontend --network=sub-etha reactapp:1.0.0 <br />
    docker run -d --name=revproxy --network=sub-etha -p 80:80 reverseproxy:1.0.0 <br />
@@ -28,7 +28,7 @@ Backend - Node <br />
 
 ### 2. Run as Docker Compose
 
-1. Run Docker Compose which builds both all three:
+1. Run Docker Compose which builds both all three: <br />
    docker-compose up -d <br />
 
 2. Check http://localhost
