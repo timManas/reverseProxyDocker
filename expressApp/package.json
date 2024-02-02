@@ -1,0 +1,23 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "An express app",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production nodemon index.js",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "docker build -t expressapp:1.0.0 ."
+  },
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "@thefrontend/prettier": "^1.0.1"
+  },
+  "prettier": "@thefrontend/prettier"
+}
